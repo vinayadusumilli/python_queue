@@ -1,0 +1,34 @@
+Let's analyze the time complexity of each method in your `Queue` class implemented using `collections.deque`:
+
+### 1. `__init__(self, size)`
+- **Operation**: Initializes an empty deque with a maximum length (`maxlen`).
+- **Time Complexity**: \( O(1) \)
+
+### 2. `add_element(self, data)`
+- **Operation**: Adds an element to the end of the deque using `append()`.
+- **Time Complexity**: \( O(1) \)
+- **Explanation**: Appending to either end of a deque is \( O(1) \) on average.
+
+### 3. `remove_element(self)`
+- **Operation**: Removes an element from the front of the deque using `popleft()`.
+- **Time Complexity**: \( O(1) \)
+- **Explanation**: Removing from the left end of a deque is \( O(1) \).
+
+### 4. `display(self)`
+- **Operation**: Prints all elements in the deque.
+- **Time Complexity**: \( O(n) \)
+- **Explanation**: Displaying all elements requires iterating through the entire deque, where \( n \) is the current number of elements.
+
+### Summary of Time Complexity
+| **Method**        | **Time Complexity** |
+|-------------------|---------------------|
+| `__init__`        | \( O(1) \)          |
+| `add_element`     | \( O(1) \)          |
+| `remove_element`  | \( O(1) \)          |
+| `display`         | \( O(n) \)          |
+
+### Overall
+- The `Queue` operations (`add_element` and `remove_element`) are very efficient with \( O(1) \) time complexity, thanks to `collections.deque`.
+- Displaying the queue has a linear time complexity \( O(n) \), which is expected since you need to visit each element to display them all.
+
+This makes your `Queue` class efficient for typical queue operations.
